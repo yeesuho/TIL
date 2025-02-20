@@ -4,4 +4,3 @@
 <br>
 
 2025.02.20 [Git Flow](/2025/gitFlow_02_20.md)
-<hr>
