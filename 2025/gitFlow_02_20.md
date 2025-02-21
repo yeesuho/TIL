@@ -2,7 +2,8 @@
 
 2025.02.21
 <br>
-<b style=font-size:20px>Git Flow란 무엇일까?</b>
+
+## Git Flow란 무엇일까?
 <br>
 Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen이</u> 제안한 워크플로우
 <br>
