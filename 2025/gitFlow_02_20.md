@@ -10,7 +10,7 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 **여러 개발자가 동시에 협업할 때 효율적인 브랜치 관리를 위해 사용됨**
 <br><br>
 
-⚪️ Git Flow의 특징<br>
+### Git Flow의 특징<br>
 
 [master, develop, feature, release, hotfix](/2025/git주요%20branch_02_21.md) 
 브랜치를 활용하여 코드 변경 사항을 체계적으로 관리.
@@ -20,7 +20,7 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 <br><br>
 
 
-📌 Git Flow 브랜치 흐름 정리 (merge 병합)
+## 📌 Git Flow 브랜치 흐름 정리 (merge 병합)
 
          feature → develop → release → master
                      ↑         ↓        ↓
@@ -34,7 +34,8 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 
 
 
- ⚪️ Git Flow의 장점 & 단점 <br>
+## ⚪️ Git Flow의 장점 & 단점 <br>
+
 ✅ 장점
 <br>✔ 체계적인 브랜치 관리 가능
 <br>✔ 여러 개발자가 협업하기 쉬움
@@ -44,5 +45,5 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 ❌ 단점
 <br>✖ 작은 프로젝트에서는 너무 복잡할 수 있음
 <br>✖ 브랜치가 많아지면서 관리가 어려울 수도 있음
-<br>✖ CI/CD(자동 배포)를 활용하는 경우 Git <br>Flow보다 GitHub Flow나 Trunk-based <br>Development가 더 적합할 수도 있음
+<br>✖ CI/CD(자동 배포)를 활용하는 경우 Git Flow보다 GitHub Flow나 Trunk-based Development가 더 적합할 수도 있음
 
