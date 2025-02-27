@@ -47,4 +47,10 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 <br>✖ 브랜치가 많아지면서 관리가 어려울 수도 있음
 <br>✖ CI/CD(자동 배포)를 활용하는 경우 Git Flow보다 GitHub Flow나 Trunk-based Development가 더 적합할 수도 있음
 
-![image](/img/gitflow.png)
+[![image](/img/gitflow.png)](https://youtu.be/EV3FZ3cWBp8?si=vc82mqNr1dWpq3zE)
+
+2025.02.27
+<br>
+Git Flow를 쓰는 이유가 뭔데??
+<br>
+([가장 이해가 잘된 영상](https://youtu.be/EV3FZ3cWBp8?si=vc82mqNr1dWpq3zE))
