@@ -23,7 +23,7 @@ NestJS (SSR 모드) | Node.js | 기본적으로 백엔드 프레임워크지만 
 ## SSR 동작 예제
 
 ### CSR 방식 (React)
-```
+``` js
 function Page() {
   const [data, setData] = useState(null);
 

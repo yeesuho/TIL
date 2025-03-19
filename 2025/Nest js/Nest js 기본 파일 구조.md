@@ -20,3 +20,10 @@ my-nest-app/
 └── nest-cli.json         # Nest CLI 설정 파일
 
 ```
+
+2025.03.18 
+CRUD 보일러플레이트 자동 생성 기능
+``` 
+$ nest g resource [name]
+```
+예를 들어 **nest g resource Users** 명령으로 Users 리소스를 생성했다면 module, controller, service, entity, dto 등의 코드와 테스트 코드를 자동 생성해줍니다
