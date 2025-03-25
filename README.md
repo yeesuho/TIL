@@ -17,5 +17,5 @@
 <br>
 [npm 맥북 권한 오류](/2025/npm%20맥북%20권한%20오류.md)
 <br>
-[TypeORM](/2025/TypeORM/TypeORM.md)
+[TypeORM](/2025/TypeORM)
 <br>
