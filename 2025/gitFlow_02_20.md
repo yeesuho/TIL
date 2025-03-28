@@ -53,7 +53,6 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 
 2025.02.27
 <br>
-### Git Flow를 쓰는 이유가 뭔데??
-<hr>
+### Git Flow를 쓰는 이유가 뭘까
 
 ([가장 이해가 잘된 영상](https://youtu.be/EV3FZ3cWBp8?si=vc82mqNr1dWpq3zE))
