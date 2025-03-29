@@ -20,9 +20,9 @@ profile: Profile;
 const user = await userRepository.findOne({ where: { id: 1 } });
 console.log(user.profile); // 자동으로 profile이 로드됨
 ```
-✅ 장점: 한 번의 쿼리로 모든 데이터를 가져올 수 있어서 편리함.
+장점: 한 번의 쿼리로 모든 데이터를 가져올 수 있어서 편리함.
 
-❌ 단점: 항상 데이터를 불러와서 불필요한 성능 저하가 발생할 수 있음.
+단점: 항상 데이터를 불러와서 불필요한 성능 저하가 발생할 수 있음.
 
 
 <br>
@@ -41,6 +41,6 @@ profile: Promise<Profile>;
 const user = await userRepository.findOne({ where: { id: 1 } });
 const profile = await user.profile; // profile이 필요할 때 로드됨
 ```
-✅ 장점: 필요할 때만 데이터를 가져와서 성능 최적화 가능.
+장점: 필요할 때만 데이터를 가져와서 성능 최적화 가능.
 
-❌ 단점: 추가적인 쿼리가 실행되어 성능이 저하될 수도 있음.
+단점: 추가적인 쿼리가 실행되어 성능이 저하될 수도 있음.
