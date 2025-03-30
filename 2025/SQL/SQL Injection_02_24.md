@@ -6,7 +6,7 @@
 
 아래처럼 PHP 코드가 있으면 SQL 인젝션 공격이 가능함
 
-```
+```php
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -26,7 +26,7 @@ SQL 인젝션 공격 예제
 <br>
 
 실제 실행되는 SQL 쿼리:
-```
+```sql
 SELECT * FROM users WHERE username = 'admin' AND password = '' OR '1'='1';
 ```
 '1'='1' → 항상 참(True)이므로 비밀번호 없이 로그인 성공<br>
