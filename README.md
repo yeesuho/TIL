@@ -19,3 +19,6 @@
 <br>
 [TypeORM](/2025/TypeORM)
 <br>
+[DOM](/2025/DOM.md)
+<br>
+[React](/2025/React/)
