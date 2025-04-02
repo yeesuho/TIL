@@ -1,6 +1,6 @@
 2025.04.02
 
-# Props란
+# Props란?
 **Props (Properties)** 는 React에서 컴포넌트 간 데이터를 전달하는 방법 <br>
 부모 컴포넌트가 자식 컴포넌트로 값을 넘겨줄 때 사용<br>
 Props는 읽기 전용(immutable)이며, 자식 컴포넌트에서 변경할 수 없다
