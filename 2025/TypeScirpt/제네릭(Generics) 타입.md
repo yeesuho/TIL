@@ -75,6 +75,8 @@ function merge<T extends object, U extends object>(obj1: T, obj2: U): T & U {
 const merged = merge({ name: "Alice" }, { age: 25 });
 console.log(merged); // { name: "Alice", age: 25 }
 ```
+
+
 T와 U는 객체 타입이어야 한다는 제약을 추가한 것
 
 #  제네릭의 장점
@@ -86,3 +88,4 @@ T와 U는 객체 타입이어야 한다는 제약을 추가한 것
 
 정리하자면 제네릭은 "타입을 나중에 지정할 수 있도록" 만들어주는 기능 그리고<br>
 함수, 클래스, 인터페이스 등에서 제네릭을 사용하면 코드를 더 유연하게 만들 수 있으며 제네릭을 사용하면 타입 안전성도 높여주고, 재사용성과 가독성도 좋다~
+
