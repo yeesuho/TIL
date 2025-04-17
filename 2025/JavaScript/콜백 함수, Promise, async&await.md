@@ -99,3 +99,18 @@ login(user, () => {
 
 - 그래서 → Promise나 async/await를 사용해서 해결하죠
 
+
+<br>
+
+2025.04.16
+
+# Promise
+
+
+
+<br>
+
+2025.04.17
+
+# async & await
+
