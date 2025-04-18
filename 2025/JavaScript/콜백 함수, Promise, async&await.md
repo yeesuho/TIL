@@ -106,9 +106,167 @@ login(user, () => {
 
 # Promise
 
+Promise는 비동기 작업의 결과를 나중에 받을 수 있게 해주는 객체입니다<br>
+예를 들자면 서버에서 데이터를 받아오기, 파일 읽기, 타이머 (setTimeout)<br>
+이런 작업들은 시간이 걸리기 때문에, 기다리지 않고 다음 코드로 넘어가려고 비동기 방식으로 처리합니다<br>
+그래서 자바스크립트에서 "나중에 결과가 오면 알려줄게"라고 약속하는게<br>
+바로 Promise입니다
 
+### 왜 Promise가 필요할까
+예전에는 **콜백 함수(callback)** 로 비동기 처리를 많이 했지만 콜백 안에 또 콜백, 또 콜백이 들어가다보면..
+```js
+doSomething(function(result1) {
+  doSomethingElse(result1, function(result2) {
+    doAnotherThing(result2, function(result3) {
+      // ...
+    });
+  });
+});
+```
+이런식으로 콜백 지옥이 발생하게 됨 그래서 나온 게 Promise입니다
+
+사용법 에시)
+```js
+// 1초 후에 "완료"라고 알려주는 Promise 만들기
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("완료");
+  }, 1000);
+});
+
+// 결과를 받아서 출력
+myPromise.then(result => {
+  console.log("결과:", result);  // 결과: 완료
+});
+```
 
 <br>
+
+## 세가지 상태
+Promise는 비동기 작업의 "진행 상태"를 나타내는 **세 가지 상태(state)** 를 가질 수 있습니다
+
+### pending (대기 상태)
+의미:
+- 비동기 작업이 아직 끝나지 않음
+
+- 결과도 없고, 에러도 없음
+
+ex)
+```js
+const p = new Promise((resolve, reject) => {
+  // 3초 뒤에 결과를 줄 예정
+  setTimeout(() => {
+    resolve("끝");
+  }, 3000);
+});
+```
+이 코드를 실행하 처음에는 p는 pending 상태입니다<br>
+아무일도 안일어나죠
+
+### fulfilled (성공 상태)
+의미:
+- 비동기 작업이 성공적으로 끝남
+
+- resolve()를 호출해서 결과를 줬음
+
+ex)
+```js
+const p = new Promise((resolve, reject) => {
+  resolve("성공");
+});
+
+p.then(result => {
+  console.log(result); // "성공"
+});
+```
+resolve("성공")이 실행되면 상태가 fulfilled로 바뀌고<br>
+.then(...) 안에 있는 코드가 실행됩니다
+
+<br>
+
+### rejected (실패 상태)
+의미:
+- 비동기 작업이 실패함
+
+- reject()를 호출하거나 에러가 발생함
+
+ex)
+```js
+const p = new Promise((resolve, reject) => {
+  reject("에러 발생");
+});
+
+p.catch(error => {
+  console.log(error); // "에러 발생"
+});
+```
+reject("에러 발생")이 실행되면 상태는 rejected로 바뀌고
+.catch(...) 안에 있는 코드가 실행됩니다
+
+<br>
+흐름
+
+```css
+[처음 상태]
+→ pending
+
+[resolve 호출되면]
+→ fulfilled
+
+[reject 호출되면]
+→ rejected
+```
+그리고 한 번 fulfilled나 rejected 상태가 되면
+다시는 pending으로 돌아갈 수 없습니다 (한 번 결정나면 끝)
+
+## Promise 생성 방법
+```js
+const myPromise = new Promise((resolve, reject) => {
+  // 여기에 비동기 작업
+  const success = true;
+
+  if (success) {
+    resolve("성공");
+  } else {
+    reject("실패");
+  }
+});
+```
+- ``resolve()`` → 성공했을 때
+
+- ``reject()`` → 실패했을 때
+
+
+## .then() / .catch()
+### then이 뭐죠
+=> 성공했을 때 실행되는 코드<br>
+Promise가 성공적으로 끝났을 때 (resolve가 호출됐을 때)
+그 결과를 받아서 처리하는 함수입니닷
+### 그럼 catch는 실패했을 때 쓰는건가
+=> 맞음 Promise가 실패했을 때 (reject가 호출됐을 때)
+에러나 문제를 처리하는 함수입니다
+
+### then과 catch를 같이 쓰면?
+```js
+const p = new Promise((resolve, reject) => {
+  const success = false;
+  if (success) {
+    resolve("성공");
+  } else {
+    reject("실패");
+  }
+});
+
+p.then((result) => {
+  console.log("성공:", result);
+})
+.catch((error) => {
+  console.log("실패:", error);
+});
+```
+성공하면 .then(...)이 실행되고
+
+실패하면 .catch(...)가 실행
 
 2025.04.17
 
