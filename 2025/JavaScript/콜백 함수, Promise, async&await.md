@@ -101,6 +101,7 @@ login(user, () => {
 
 
 <br>
+<br>
 
 2025.04.16
 
@@ -268,7 +269,103 @@ p.then((result) => {
 
 실패하면 .catch(...)가 실행
 
+<br>
+<br>
+<br>
+
 2025.04.17
 
 # async & await
 
+Promise를 더 편하게 쓰기 위한 문법이고 then, catch 대신 동기 코드처럼 보이게 해줘서 더 읽기 쉬워짐
+
+### 일단 간단 요약
+- async: 함수를 비동기 함수로 만들어줌 → 항상 Promise를 반환함
+
+- await: Promise가 끝날 때까지 기다림 → 결과를 변수처럼 받아올 수 있음
+
+
+### 비동기 함수 만들기 - async
+```js
+async function sayHello() {
+  return "Hello";
+}
+```
+위에 코드는 사실 이렇게 작동
+```js
+function sayHello() {
+  return Promise.resolve("Hello");
+}
+```
+즉 async 함수는 자동으로 Promise를 반환한다고 생각하면 됩니다
+
+
+### 기다리기 - await
+```js
+async function greet() {
+  const msg = await sayHello();  // sayHello()가 끝날 때까지 기다림
+  console.log(msg);              // 출력: Hello
+}
+```
+
+###  그래서 이게 뭐가 좋은거죠?
+#### async/await의 진짜 좋은 점들
+1.  코드가 깔끔해짐 (가독성 향상) <br>
+``then, catch``는``then().then().then()`` 이런 식으로 중첩 안 돼서 보기 쉽습니다
+```js
+// then 중첩 예시
+fetch(...).then(res => {
+  return res.json();
+}).then(data => {
+  return anotherFetch(data.id)
+}).then(anotherData => {
+  console.log(anotherData);
+});
+```
+```js
+// async/await
+async function getData() {
+  const res = await fetch(...);
+  const data = await res.json();
+  const anotherData = await anotherFetch(data.id);
+  console.log(anotherData);
+}
+```
+
+2. 동기 코드처럼 작성 가능<br>
+await 덕분에 코드 순서를 예측하기 쉬워지고 디버깅할 때도 어디서 멈췄는지 바로 확인 가능죠
+
+3. 에러 처리가 간편<br>
+try/catch로 모든 await 코드를 감싸면 끝
+```js
+try {
+  const res = await fetch(url);
+  const data = await res.json();
+} catch (err) {
+  console.error("에러 발생!", err);
+}
+```
+기존의 then().catch()는 에러가 흩어지기 쉽습니다
+
+4. 여러 작업을 병렬로 처리 가능<br>
+```js
+// 순차 실행 (느림)
+const user = await fetchUser();
+const posts = await fetchPosts();
+
+// 병렬 실행 (빠름)
+const [user, posts] = await Promise.all([
+  fetchUser(),
+  fetchPosts()
+]);
+```
+
+5. 복잡한 로직 관리에 강함
+- 루프 안에서 비동기 처리할 때도 유리하고
+- 조건문 안에서 await 쓰기도 편합니다
+```js
+for (const user of users) {
+  const detail = await fetchUserDetail(user.id);
+  console.log(detail);
+}
+```
