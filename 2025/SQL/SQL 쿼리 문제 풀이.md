@@ -1,6 +1,6 @@
 2025.04.18
 
-학교에서 소영쌤이 연습하라고 내주신 SQL문을 기록해보려고 합니다 <br>
+학교에서 소영쌤이 연습하라고 내주신 SQL문제를 기록해보려고 합니다 <br>
 **틀린 부분이 있을 수도 있습니다**
 
 
@@ -188,4 +188,4 @@ select empname from employee, department where dno = deptno and (deptname != '�
 select deptname from department minus select deptname from employee, department where dno = deptno;
 ```
 
-다 정답인지는 잘 모르겠지만 일단 저는 13번 문제가 가장 애먹었네요..
+다 정답인지는 잘 모르겠지만 일단 저는 13번 문제가 가장 애먹었네요

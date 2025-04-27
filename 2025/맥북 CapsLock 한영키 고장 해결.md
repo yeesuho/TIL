@@ -31,3 +31,11 @@ Caps Lock 키로 눌러주면 위 사진들처럼 F19로 바뀌는 것을 볼 �
 입력할 때에 shift를 누르고 사용하면 되긴 함
 
 [참고한 블로그](https://velog.io/@pocpoc0202/%EB%A7%A5%EB%B6%81-%ED%95%9C%EC%98%81%ED%82%A4-%EB%A7%A5%EB%B6%81-Caps-Lock-%ED%95%9C%EC%98%81%EC%A0%84%ED%99%98-%EB%94%9C%EB%A0%88%EC%9D%B4-%EC%97%90%EB%9F%AC%EB%A7%A5%EB%B6%81-%ED%95%9C%EC%98%81%ED%82%A4-%EA%B3%A0%EC%9E%A5-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0)
+
+
+<br>
+
+2025.04.27
+
+추가로 vscode에서 한글이 씹히는 문제가 있어서 간단하게 해결한 방법입니다<br>
+[참고](https://velog.io/@fnqhdtm/issu)
