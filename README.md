@@ -5,7 +5,7 @@
 
 [2025년 공부한거 정리](/2025/)
 <br>
-[Git Flow](/2025/gitFlow_02_20.md)
+[Git & GitHub](/2025/Git%20&%20GitHub/)
 <br>
 [DI, IoC Container](/2025/DI,%20IoC%20컨테이너_02_22.md)
 <br>

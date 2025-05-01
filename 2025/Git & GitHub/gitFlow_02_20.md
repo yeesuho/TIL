@@ -13,7 +13,7 @@ Git Flow는 Git을 활용한 브랜치 전략 중 하나로, <u>Vincent Driessen
 
 ### Git Flow의 특징<br>
 
-[master, develop, feature, release, hotfix](/2025/git주요%20branch_02_21.md) 
+[master, develop, feature, release, hotfix](/2025/Git%20&%20GitHub/git주요%20branch_02_21.md) 
 브랜치를 활용하여 코드 변경 사항을 체계적으로 관리.
 개발, 테스트, 배포 단계를 명확하게 구분.
 안정적인 코드만 운영(master) 브랜치에 반영.
