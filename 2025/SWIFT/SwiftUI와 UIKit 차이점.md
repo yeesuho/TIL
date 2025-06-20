@@ -138,5 +138,3 @@ SwiftUI <-> UIKit 간 호환 레이어(UIHostingController, UIViewRepresentable 
 - 똑같은 기능인데 코드 두 번 작성해야 하는 상황 생김
 
 >결론적으로 같이 쓸 때 좋은 건	SwiftUI에서 부족한 기능을 UIKit으로 보완할 때 이고 아무 이유 없이 무조건 같이 쓰는 건 복잡하고 비효율적일 수 있습니다
-
-요할 때만 전략적으로 섞는 게 베스트라고 생각해요
