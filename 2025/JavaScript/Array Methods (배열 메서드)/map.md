@@ -6,6 +6,9 @@ map()은 배열의 각 요소를 변형해서, 새로운 배열을 만드는 함
 
 ### 기본 문법
 ```js
+배열.map(요소 => 바꾼값)
+```
+```js
 array.map((element, index, array) => {
   // return 새로운 값
 })
@@ -14,8 +17,8 @@ array.map((element, index, array) => {
 파라미터|설명
 |:-:|:-:|
 element|배열의 현재 요소
-index|현재 요소의 인덱스
-array|원본 배열 전체
+index|현재 요소의 인덱스 (생략 가능)
+array|원본 배열 전체 (생략 가능)
 
 ## 핵심 특징
 - 원본 배열은 변경되지 않음
