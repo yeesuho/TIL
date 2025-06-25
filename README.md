@@ -3,8 +3,9 @@
 <hr>
 <br>
 
-[2025년 공부한거 정리](/2025/)
+# [2025년 공부한거 정리](/2025/)
 <br>
+
 [Git & GitHub](/2025/Git%20&%20GitHub/)
 <br>
 [DI, IoC Container](/2025/DI,%20IoC%20컨테이너_02_22.md)
@@ -32,3 +33,7 @@
 [JAVA](/2025/JAVA/)
 <br>
 [동기, 비동기](/2025/동기%20비동기.md)
+<br>
+[Swift](/2025/SWIFT/)
+<br>
+[JavaScript](/2025/JavaScript/)
