@@ -9,3 +9,35 @@
 글로벌 스코프 (Global Scope)
 - 함수 밖에서 선언된 변수는 어디서든 접근 가능
 - 전역 스코프라고도 합니다
+```js
+var a = 10;
+function foo() {
+  console.log(a); // 10
+}
+foo();
+```
+
+### 함수 스코프 (Function Scope)
+- `var`, `let`, `const` 모두 함수 안에서 선언된 변수는 함수 안에서만 접근 가능
+
+```js
+function test() {
+  var x = 5;
+  console.log(x); // 5
+}
+console.log(x); // 오류 (함수 밖에서는 접근 불가)
+```
+
+### 블록 스코프 (Block Scope)
+- { } 중괄호 안의 범위
+- let, const는 블록 레벨 스코프를 가지며, var는 가지지 않음
+```js
+if (true) {
+  var a = 1;
+  let b = 2;
+  const c = 3;
+}
+console.log(a); // 1 (var는 블록 스코프 없음)
+console.log(b); // 오류
+console.log(c); // 오류
+```
