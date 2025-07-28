@@ -115,9 +115,8 @@ struct ContentView: View {
 `@ObservedObject`|모델 객체를 관찰하여 화면 자동 업데이트|SwiftUI 뷰 내부
 
 
-`@State`는 **값 타입(value type)** 인 Int, Bool, String, Array, Struct 등에 적합하고<br>
-값이 바뀌면 SwiftUI가 화면을 자동으로 리렌더링 (re-render) 해주지만<br>
-@State는 **클래스(참조 타입, reference type)** 의 내부 값 변화를 감지하지 못함
+`@State`는 **값 타입(value type)** 인 Int, Bool, String, Array, Struct 등의 값이 바뀌면 SwiftUI가 화면을 자동으로 리렌더링 (re-render) 해주지만<br>
+**클래스(참조 타입, reference type)** 의 내부 값 변화를 감지하지 못함
 
 그래서 SwiftUI는 클래스의 속성 변화까지 감지하려면<br>
 -> `@Published`, `ObservableObject`, `@ObservedObject` 같은 **Observable 삼총사**를 써야 합니더
