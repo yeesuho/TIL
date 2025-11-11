@@ -1,0 +1,78 @@
+2025.11.11
+
+# 원격저장소 추가 - git remote add
+
+add remote는 로컬 git 저장소에 원격 저장소를 추가 하는 명령입니다
+
+보통 git init 이후에 Github 이나 Gitlab의 원격 저장소를 추가하기 위해 사용하는 명령어 인데요
+
+이미 특정 원격 저장소와 연결이 되어 있을때 해당 저장소와의 연결을 끊고 다른 저장소와 새로 연결을 하거나 혹은 한번에 여러 개의 저장소에 push 하는 등 여러가지 용도로 사용할 수 있는 명령어 입니다
+
+### 원격 저장소 추가 방법
+
+``` git
+git remote add origin [추가할 원격 git 저장소 주소]
+```
+이후 기존의 원격 저장소가 없어서 원격 저장소가 추가가 되었다면 아래와 같이 commit 및 push를 진행 해 주면 됩니다
+```
+git add .
+git commit -m "커밋메시지"
+git push origin main
+```
+여러분은 브랜치 이름을 master, main 둘중에서 뭘쓰시나요? 저는 main을 씁니다
+
+
+### 하지만 이미 기존의 원격저장소가 등록 되어 있는 경우에는
+
+이미 origin 이라는 이름의 remote가 있기 때문에 추가가 되지 않습니다
+
+fatal: remote origina already exists.
+
+
+### 원격저장소 목록 조회
+아래의 명령어를 입력해 (-v 혹은 -verbose) 원격 저장소 목록을 확인 합니다
+
+```git 
+git remote -v
+```
+
+
+## 원격 저장소 추가는 크게 세가지 방법이 있다네요
+### 1) 기존 원격 저장소 그대로 두고 추가하는 방법
+또 다른 이름으로 remote를 추가 해 줍니다<br>
+second 라는 이름으로 추가 한다고 가정하면 아래 명령어 처럼 입력합니다
+```git
+git remote add second git@github.com:Shane-Park/playddit.git
+```
+
+### 2) 기존 원격 저장소 이름을 old-origin으로 변경하고 origin으로 추가하는 방법
+```git
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@github.com:Shane-Park/playddit.git
+git push -u origin --all
+git push -u origin --tags
+```
+
+### 3) 기존 원격저장소를 삭제하고 새로 추가하는 방법
+```git
+git remote remove origin
+git remote add origin git@github.com:Shane-Park/playddit.git
+```
+
+## 소스 반영
+그냥 git push를 했더니 upstream branch가 설정되어있지 않기 때문에 에러가 발생했습니다
+```git
+git push
+```
+
+-u 옵션을 붙여 push 합니다.
+
+
+> -u는 --set-upstream과 같은 역할 을 합니다.
+
+> For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less git-pull[1] and other commands.
+
+```git
+git push -u origin main
+```
