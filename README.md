@@ -4,37 +4,55 @@
 <br>
 틀린 내용 있을 수도 있음
 
-# [2025년 공부한거 정리](/2025/)
-<br>
+# [공부한거 정리](/공부한거%20정리/)
 
-[Git & GitHub](/2025/Git%20&%20GitHub/)
-<br>
-[DI, IoC Container](/2025/DI,%20IoC%20컨테이너_02_22.md)
-<br>
-[SQL](/2025/SQL/)
-<br>
-[JDBC](/2025/JDBC/)
-<br>
-[JWT](/2025/JWT.md)
-<br>
-[Nest js](/2025/Nest%20js/)
-<br>
-[npm 맥북 권한 오류 해결](/2025/npm%20맥북%20권한%20오류%20해결법.md)
-<br>
-[TypeORM](/2025/TypeORM)
-<br>
-[DOM](/2025/DOM.md)
-<br>
-[React](/2025/React/)
-<br>
-[TypeScript](/2025/TypeScirpt/)
-<br>
-[얕은 복사와 깊은 복사](/2025/얕은%20복사와%20깊은%20복사.md)
-<br>
-[JAVA](/2025/JAVA/)
-<br>
-[동기, 비동기](/2025/동기%20비동기.md)
-<br>
-[Swift](/2025/SWIFT/)
-<br>
-[JavaScript](/2025/JavaScript/)
+
+### [Flutter](/공부한거%20정리/Flutter/)
+
+
+### [Swift](/공부한거%20정리/SWIFT/)
+
+
+### [Git & GitHub](/공부한거%20정리/Git%20&%20GitHub/)
+
+
+### [DI, IoC Container](/공부한거%20정리/DI,%20IoC%20컨테이너_02_22.md)
+
+
+### [SQL](/공부한거%20정리/SQL/)
+
+
+### [JDBC](/공부한거%20정리/JDBC/)
+
+
+### [JWT](/공부한거%20정리/JWT.md)
+
+
+### [Nest js](/공부한거%20정리/Nest%20js/)
+
+
+### [npm 맥북 권한 오류 해결](/공부한거%20정리/npm%20맥북%20권한%20오류%20해결법.md)
+
+
+### [TypeORM](/공부한거%20정리/TypeORM)
+
+
+### [DOM](/공부한거%20정리/DOM.md)
+
+
+### [React](/공부한거%20정리/React/)
+
+
+### [TypeScript](/공부한거%20정리/TypeScirpt/)
+
+
+### [얕은 복사와 깊은 복사](/공부한거%20정리/얕은%20복사와%20깊은%20복사.md)
+
+
+### [JAVA](/공부한거%20정리/JAVA/)
+
+
+### [동기, 비동기](/공부한거%20정리/동기%20비동기.md)
+
+
+### [JavaScript](/공부한거%20정리/JavaScript/)
