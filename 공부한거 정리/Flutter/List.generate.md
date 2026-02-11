@@ -38,14 +38,14 @@ print(list); // [0, 1, 2, 3, 4]
 ## 자주 쓰는 패턴
 
 ### 1) 1~n 만들기
-```
+```dart
 final nums = List.generate(5, (i) => i + 1);
 print(nums); // [1, 2, 3, 4, 5]
 ```
 
 
 ### 2) 같은 값으로 채우기
-```
+```dart
 final zeros = List.generate(4, (_) => 0);
 print(zeros); // [0, 0, 0, 0]
 ```
@@ -53,15 +53,24 @@ print(zeros); // [0, 0, 0, 0]
 `_`는 `안 쓸 변수`라는 뜻 (index 안 쓸 때 많이 씀) -  Swift로 알고리즘 풀때 많이 써서 익숙하네요
 
 ### 3) 계산 결과로 채우기
-```
+```dart
 final squares = List.generate(6, (i) => i * i);
 print(squares); // [0, 1, 4, 9, 16, 25]
 ```
 
 ### 4) Widget 리스트 만들기 (Flutter에서 많이 씀)
-```
+```dart
 final items = List.generate(
   3,
   (i) => Text("Item $i"),
 );
 ```
+
+## 번외: 2차원 리스트 생성
+```dart
+void main() {
+  List<List<int>> matrix = List.generate(3, (i) => List.generate(3, (j) => i + j));
+  print(matrix);
+}
+```
+2차원 리스트도 이런식으로 generate 안에 generate를 쓰는 방식으로 사용할 수 있습니다
